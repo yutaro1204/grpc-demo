@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  web_service:
+    build: .
+    container_name: echo_web_service
+    # command: go run main.go # run normally
+    # command: fresh # run with hot reloading
+    tty: true
+    volumes:
+      - ./src:/app
+    ports:
+      - 8080:1323
+  # other services

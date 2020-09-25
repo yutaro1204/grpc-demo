@@ -1,0 +1,10 @@
+syntax = "proto3";
+service Sample {
+  rpc GetSample (GetSampleMessage) returns (ReturnResponse) {}
+}
+message GetSampleMessage {
+  string threshold = 1;
+}
+message ReturnResponse {
+  string item = 1;
+}
